@@ -25,14 +25,37 @@ console.log(declinationOfNumber(5, "стул", "стула", "стульев"));
 <script>
   "use strict";
 
+  /**
+   * Функция declinationOfNumber Необходимо реализовать функцию, которая будет принимать первым аргументом
+   * целое положительное число, в следующих трех аргументах функция принимает слова
+   * в разных склонениях.
+   * Функция должна возвращать одно из трех переданных в параметры слов подходящее
+   * под число, которое передано первым аргументом.
+   * @param {} count количество чего-то для чего мы должны вывести правильное склонение
+   * @param {} count склонение один
+   * @param {} count склонение два
+   * @param {} count склонение пять
+   * @return {} возвращаем склонение соответсвующее значению переанного count
+   */
   function declinationOfNumber(count, one, two, five) {
+     if (count === 1 ) {
+       return one
+
+     } else if (count === 2) {
+       return two
+
+     } else {
+       return five;
+
+     }
 
   }
 
+
   // Число яблок, можно пробовать поставить свое целое, положительное число.
-  const applesNumber = 5;
+  let applesNumber = 5;
   // Получаем от функции одно из слов "яблоко", "яблока" или "яблок".
-  const word = declinationOfNumber(applesNumber, "яблоко", "яблока", "яблок");
+  let word = declinationOfNumber(applesNumber, "яблоко", "яблока", "яблок");
   // Выводим корректную строку, например:
   // "У меня есть 1 яблоко."
   // "У меня есть 2 яблока."
@@ -41,6 +64,22 @@ console.log(declinationOfNumber(5, "стул", "стула", "стульев"));
   // выводится в console.log, должна иметь правильное склонение слова "яблоко".
   console.log(`У меня есть ${applesNumber} ${word}.`);
 
-</script>
+  // applesNumber = 1;
+  // word = declinationOfNumber(applesNumber, "яблоко", "яблока", "яблок");
+  // console.log(`У меня есть ${applesNumber} ${word}.`);
+
+  // applesNumber = 2;
+  // word = declinationOfNumber(applesNumber, "яблоко", "яблока", "яблок");
+  // console.log(`У меня есть ${applesNumber} ${word}.`);
+
+  // applesNumber = 99;
+  // word = declinationOfNumber(applesNumber, "яблоко", "яблока", "яблок");
+  // console.log(`У меня есть ${applesNumber} ${word}.`);
+
+  // applesNumber = -2;
+  // word = declinationOfNumber(applesNumber, "яблоко", "яблока", "яблок");
+  // console.log(`У меня есть ${applesNumber} ${word}.`);
+
+  </script>
 </body>
 </html>
