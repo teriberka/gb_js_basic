@@ -29,9 +29,69 @@
 Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
 -->
 <script>
-  "use strict";
+ "use strict";
+   
+  /**
+   * Функция sum вычисляет сумму параметров 
+   * @param {number} a первый параметр функции
+   * @param {number} b второй параметр функции
+   * @returns {number} возвращает сумму параметра a и b
+   */
+  function sum(a, b) {
+    return a + b;
+  }
+  
+  /**
+   * Функция dif вычисляет разность параметров 
+   * @param {number} a первый параметр функции
+   * @param {number} b второй параметр функции
+   * @returns {number} возвращает разность параметров, Внимание! функция всегда вычетает значение меньшего параметра из большего параметра
+   */
+  function dif (a, b) {
+    if (a > b) {
+      return a - b;
+    } else if (b > a) {
+      return b - a;
+    } else {
+      return 0;
+    }
+  }
+  
+  /**
+   * Функция multiply вычисляет произведение параметров 
+   * @param {number} a первый параметр функции
+   * @param {number} b второй параметр функции
+   * @returns {number} возвращает произведением входящих параметров
+   */
+  function multiply(a, b) {
+    return a * b;
+  }
+  
+  /**
+   * Функция division производит деление  
+   * @param {number} a первый параметр функции
+   * @param {number} b второй параметр функции
+   * @returns {number} возвращает результат деление входящих параметров
+   */
+  function division(a, b) {
+    return a / b;
+  }
 
   // Здесь пишем решение, данный комментарий необходимо стереть.
+
+  console.log(sum(3,99))
+  console.log(sum(1,-5))
+
+  console.log(dif(2,15))
+  console.log(dif(10,6))
+  console.log(dif(1,1))
+
+  console.log(multiply(3,4))
+  console.log(multiply(-2,3))
+
+  console.log(division(8,4))
+  console.log(division(20,6))
+
 </script>
 </body>
 </html>
