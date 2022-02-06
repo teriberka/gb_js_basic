@@ -32,7 +32,7 @@ Infinity делать не нужно, однако, в случае если б
 <script>
   "use strict";
 
-    /**
+  /**
    * Функция sum вычисляет сумму параметров 
    * @param {number} a первый параметр функции
    * @param {number} b второй параметр функции
@@ -78,18 +78,25 @@ Infinity делать не нужно, однако, в случае если б
     return a / b;
   }
 
-  function mathOperation (a, b, operat) {
+  /**
+   * Функция mathOperation возвращает результат операции, который был передан в параметр operation для двух первых аргументов (arg1 и arg2).
+   * @param {number} arg1 - первое число.
+   * @param {number} arg2 - второе число.
+   * @param {string} operat это строка содержащая символ "+", "-", "*", "/" характерезующий какую операцию нужно выполнить
+   * @returns {number} возвращает результат работы функции выполнившую операцию
+   */
+  function mathOperation (arg1, arg2, operat) {
     if (operat === "+") {
-      return sum(a, b);
+      return sum(arg1, arg2);
 
     } else if (operat === "-") {
-      return dif(a,b);
+      return dif(arg1, arg2);
 
     } else if (operat === "*") {
-      return multiply(a, b);
+      return multiply(arg1, arg2);
       
     } else if (operat === ":") {
-      return division(a, b);
+      return division(arg1, arg2);
 
     } else {
       return NaN;
