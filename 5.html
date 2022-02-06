@@ -32,7 +32,76 @@ Infinity делать не нужно, однако, в случае если б
 <script>
   "use strict";
 
+    /**
+   * Функция sum вычисляет сумму параметров 
+   * @param {number} a первый параметр функции
+   * @param {number} b второй параметр функции
+   * @returns {number} возвращает сумму параметра a и b
+   */
+   function sum(a, b) {
+    return a + b;
+  }
+  
+  /**
+   * Функция dif вычисляет разность параметров 
+   * @param {number} a первый параметр функции
+   * @param {number} b второй параметр функции
+   * @returns {number} возвращает разность параметров, Внимание! функция всегда вычетает значение меньшего параметра из большего параметра
+   */
+  function dif (a, b) {
+    if (a > b) {
+      return a - b;
+    } else if (b > a) {
+      return b - a;
+    } else {
+      return 0;
+    }
+  }
+  
+  /**
+   * Функция multiply вычисляет произведение параметров 
+   * @param {number} a первый параметр функции
+   * @param {number} b второй параметр функции
+   * @returns {number} возвращает произведением входящих параметров
+   */
+  function multiply(a, b) {
+    return a * b;
+  }
+  
+  /**
+   * Функция division производит деление  
+   * @param {number} a первый параметр функции
+   * @param {number} b второй параметр функции
+   * @returns {number} возвращает результат деление входящих параметров
+   */
+  function division(a, b) {
+    return a / b;
+  }
+
+  function mathOperation (a, b, operat) {
+    if (operat === "+") {
+      return sum(a, b);
+
+    } else if (operat === "-") {
+      return dif(a,b);
+
+    } else if (operat === "*") {
+      return multiply(a, b);
+      
+    } else if (operat === ":") {
+      return division(a, b);
+
+    } else {
+      return NaN;
+
+    }
+
+  }
   // Здесь пишем решение, данный комментарий необходимо стереть.
+
+  console.log(mathOperation(5, 3, "+")); // 8
+  console.log(mathOperation(5, 3, ":)")); // NaN
+
 </script>
 </body>
 </html>
